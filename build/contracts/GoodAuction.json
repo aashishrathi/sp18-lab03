@@ -1,0 +1,1019 @@
+{
+  "contractName": "GoodAuction",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getHighestBidder",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x003495a4"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getHighestBid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x4979440a"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "bid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function",
+      "signature": "0x1998aeef"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdrawRefund",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x110f8874"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getMyBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x4c738909"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "reduceBid",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x057ae235"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getHighestBidder\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"reduceBid\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"withdrawRefund\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"bid\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getHighestBid\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getMyBalance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"}],\"devdoc\":{\"methods\":{},\"title\":\"GoodAuction \"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/GoodAuction.sol\":\"GoodAuction\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/AuctionInterface.sol\":{\"keccak256\":\"0x71e339a4da53d881e8a4a8204bb6c3f08cafb6cd87b0d6667ff173eac8d50ac4\",\"urls\":[\"bzzr://b0c9c1afcdb05bf761a4421c2c07ecdf4e751e1ea13d9f8e3774589e14eb7442\"]},\"/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/GoodAuction.sol\":{\"keccak256\":\"0x3c3693ffd125c8d3c78e9a8dab1b6df28de342cb80d1c6f94991794c0309b906\",\"urls\":[\"bzzr://cc00831b8177dc4d2e9f4ca152376aedb6f970e2370da26ab720387dd483eef1\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610240806100206000396000f3fe608060405260043610610077576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680623495a414610079578063057ae235146100d0578063110f8874146100e75780631998aeef146101165780634979440a146101385780634c73890914610163575b005b34801561008557600080fd5b5061008e61018e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100dc57600080fd5b506100e56101b7565b005b3480156100f357600080fd5b506100fc6101b9565b604051808215151515815260200191505060405180910390f35b61011e6101be565b604051808215151515815260200191505060405180910390f35b34801561014457600080fd5b5061014d6101c3565b6040518082815260200191505060405180910390f35b34801561016f57600080fd5b506101786101cd565b6040518082815260200191505060405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b565b600090565b600090565b6000600154905090565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490509056fea165627a7a72305820cfeff19e09c082739b9eb6717ecea342510ccdc61747b664c8aa28f26719b98c0029",
+  "deployedBytecode": "0x608060405260043610610077576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680623495a414610079578063057ae235146100d0578063110f8874146100e75780631998aeef146101165780634979440a146101385780634c73890914610163575b005b34801561008557600080fd5b5061008e61018e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100dc57600080fd5b506100e56101b7565b005b3480156100f357600080fd5b506100fc6101b9565b604051808215151515815260200191505060405180910390f35b61011e6101be565b604051808215151515815260200191505060405180910390f35b34801561014457600080fd5b5061014d6101c3565b6040518082815260200191505060405180910390f35b34801561016f57600080fd5b506101786101cd565b6040518082815260200191505060405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b565b600090565b600090565b6000600154905090565b6000600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205490509056fea165627a7a72305820cfeff19e09c082739b9eb6717ecea342510ccdc61747b664c8aa28f26719b98c0029",
+  "sourceMap": "84:1498:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;84:1498:2;;;;;;;",
+  "deployedSourceMap": "84:1498:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;215:86:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;215:86:0;;;;;;;;;;;;;;;;;;;;;;;;;;;1247:32:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1247:32:2;;;;;;661:73;;8:9:-1;5:2;;;30:1;27;20:12;5:2;661:73:2;;;;;;;;;;;;;;;;;;;;;;;;;;;418:70;;;;;;;;;;;;;;;;;;;;;;;;;;;303:77:0;;8:9:-1;5:2;;;30:1;27;20:12;5:2;303:77:0;;;;;;;;;;;;;;;;;;;;;;;859:86:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;859:86:2;;;;;;;;;;;;;;;;;;;;;;;215::0;264:7;284:13;;;;;;;;;;;277:20;;215:86;:::o;1247:32:2:-;:::o;661:73::-;704:4;661:73;:::o;418:70::-;458:4;418:70;:::o;303:77:0:-;349:4;366:10;;359:17;;303:77;:::o;859:86:2:-;905:4;922:7;:19;930:10;922:19;;;;;;;;;;;;;;;;915:26;;859:86;:::o",
+  "source": "pragma solidity 0.5.0;\n\nimport \"./AuctionInterface.sol\";\n\n/** @title GoodAuction */\ncontract GoodAuction is AuctionInterface {\n\n\t/* New data structure, keeps track of refunds owed */\n\tmapping(address => uint) refunds;\n\n\n\t/* \tBid function, now shifted to pull paradigm\n\t\tMust return true on successful send and/or bid, bidder\n\t\treassignment. Must return false on failure and\n\t\tallow people to retrieve their funds  */\n\tfunction bid() payable external returns(bool) {\n\t\t// YOUR CODE HERE\n\t}\n\n\t/*  Implement withdraw function to complete new\n\t    pull paradigm. Returns true on successful\n\t    return of owed funds and false on failure\n\t    or no funds owed.  */\n\tfunction withdrawRefund() external returns(bool) {\n\t\t// YOUR CODE HERE\n\t}\n\n\t/*  Allow users to check the amount they are owed\n\t\tbefore calling withdrawRefund(). Function returns\n\t\tamount owed.  */\n\tfunction getMyBalance() view external returns(uint) {\n\t\treturn refunds[msg.sender];\n\t}\n\n\n\t/* \tConsider implementing this modifier\n\t\tand applying it to the reduceBid function\n\t\tyou fill in below. */\n\tmodifier canReduce() {\n\t\t_;\n\t}\n\n\n\t/*  Rewrite reduceBid from BadAuction to fix\n\t\tthe security vulnerabilities. Should allow the\n\t\tcurrent highest bidder only to reduce their bid amount */\n\tfunction reduceBid() external {}\n\n\n\t/* \tRemember this fallback function\n\t\tgets invoked if somebody calls a\n\t\tfunction that does not exist in this\n\t\tcontract. But we're good people so we don't\n\t\twant to profit on people's mistakes.\n\t\tHow do we send people their money back?  */\n\n\tfunction () external payable {\n\t\t// YOUR CODE HERE\n\t}\n\n}\n",
+  "sourcePath": "/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/GoodAuction.sol",
+  "ast": {
+    "absolutePath": "/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/GoodAuction.sol",
+    "exportedSymbols": {
+      "GoodAuction": [
+        117
+      ]
+    },
+    "id": 118,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 74,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:2"
+      },
+      {
+        "absolutePath": "/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/AuctionInterface.sol",
+        "file": "./AuctionInterface.sol",
+        "id": 75,
+        "nodeType": "ImportDirective",
+        "scope": 118,
+        "sourceUnit": 31,
+        "src": "24:32:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 76,
+              "name": "AuctionInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 30,
+              "src": "108:16:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionInterface_$30",
+                "typeString": "contract AuctionInterface"
+              }
+            },
+            "id": 77,
+            "nodeType": "InheritanceSpecifier",
+            "src": "108:16:2"
+          }
+        ],
+        "contractDependencies": [
+          30
+        ],
+        "contractKind": "contract",
+        "documentation": "@title GoodAuction ",
+        "fullyImplemented": true,
+        "id": 117,
+        "linearizedBaseContracts": [
+          117,
+          30
+        ],
+        "name": "GoodAuction",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 81,
+            "name": "refunds",
+            "nodeType": "VariableDeclaration",
+            "scope": 117,
+            "src": "184:32:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 80,
+              "keyType": {
+                "id": 78,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "192:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "184:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 79,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "203:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 86,
+              "nodeType": "Block",
+              "src": "464:24:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 87,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "430:2:2"
+            },
+            "returnParameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 84,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "458:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 83,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "458:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "457:6:2"
+            },
+            "scope": 117,
+            "src": "418:70:2",
+            "stateMutability": "payable",
+            "superFunction": 10,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 92,
+              "nodeType": "Block",
+              "src": "710:24:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 93,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawRefund",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "684:2:2"
+            },
+            "returnParameters": {
+              "id": 91,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 90,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "704:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 89,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "704:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "703:6:2"
+            },
+            "scope": 117,
+            "src": "661:73:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "911:34:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 98,
+                      "name": "refunds",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 81,
+                      "src": "922:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 101,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 407,
+                        "src": "930:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 100,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "930:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "922:19:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 97,
+                  "id": 102,
+                  "nodeType": "Return",
+                  "src": "915:26:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMyBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "880:2:2"
+            },
+            "returnParameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 96,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "905:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "904:6:2"
+            },
+            "scope": 117,
+            "src": "859:86:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 107,
+              "nodeType": "Block",
+              "src": "1079:9:2",
+              "statements": [
+                {
+                  "id": 106,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1083:1:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 108,
+            "name": "canReduce",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1076:2:2"
+            },
+            "src": "1058:30:2",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 111,
+              "nodeType": "Block",
+              "src": "1277:2:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 112,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reduceBid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 109,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1265:2:2"
+            },
+            "returnParameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1277:0:2"
+            },
+            "scope": 117,
+            "src": "1247:32:2",
+            "stateMutability": "nonpayable",
+            "superFunction": 13,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "1555:24:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 116,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1535:2:2"
+            },
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1555:0:2"
+            },
+            "scope": 117,
+            "src": "1526:53:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 118,
+        "src": "84:1498:2"
+      }
+    ],
+    "src": "0:1583:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/GoodAuction.sol",
+    "exportedSymbols": {
+      "GoodAuction": [
+        117
+      ]
+    },
+    "id": 118,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 74,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:2"
+      },
+      {
+        "absolutePath": "/Users/aashishrathi/Projects/BlockchainLearning/sp18-lab03/contracts/AuctionInterface.sol",
+        "file": "./AuctionInterface.sol",
+        "id": 75,
+        "nodeType": "ImportDirective",
+        "scope": 118,
+        "sourceUnit": 31,
+        "src": "24:32:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 76,
+              "name": "AuctionInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 30,
+              "src": "108:16:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AuctionInterface_$30",
+                "typeString": "contract AuctionInterface"
+              }
+            },
+            "id": 77,
+            "nodeType": "InheritanceSpecifier",
+            "src": "108:16:2"
+          }
+        ],
+        "contractDependencies": [
+          30
+        ],
+        "contractKind": "contract",
+        "documentation": "@title GoodAuction ",
+        "fullyImplemented": true,
+        "id": 117,
+        "linearizedBaseContracts": [
+          117,
+          30
+        ],
+        "name": "GoodAuction",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 81,
+            "name": "refunds",
+            "nodeType": "VariableDeclaration",
+            "scope": 117,
+            "src": "184:32:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 80,
+              "keyType": {
+                "id": 78,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "192:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "184:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 79,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "203:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 86,
+              "nodeType": "Block",
+              "src": "464:24:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 87,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "430:2:2"
+            },
+            "returnParameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 84,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 87,
+                  "src": "458:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 83,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "458:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "457:6:2"
+            },
+            "scope": 117,
+            "src": "418:70:2",
+            "stateMutability": "payable",
+            "superFunction": 10,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 92,
+              "nodeType": "Block",
+              "src": "710:24:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 93,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawRefund",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 88,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "684:2:2"
+            },
+            "returnParameters": {
+              "id": 91,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 90,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 93,
+                  "src": "704:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 89,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "704:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "703:6:2"
+            },
+            "scope": 117,
+            "src": "661:73:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "911:34:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 98,
+                      "name": "refunds",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 81,
+                      "src": "922:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 101,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 407,
+                        "src": "930:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 100,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "930:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "922:19:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 97,
+                  "id": 102,
+                  "nodeType": "Return",
+                  "src": "915:26:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMyBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "880:2:2"
+            },
+            "returnParameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 96,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "905:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "904:6:2"
+            },
+            "scope": 117,
+            "src": "859:86:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 107,
+              "nodeType": "Block",
+              "src": "1079:9:2",
+              "statements": [
+                {
+                  "id": 106,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1083:1:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 108,
+            "name": "canReduce",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1076:2:2"
+            },
+            "src": "1058:30:2",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 111,
+              "nodeType": "Block",
+              "src": "1277:2:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 112,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reduceBid",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 109,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1265:2:2"
+            },
+            "returnParameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1277:0:2"
+            },
+            "scope": 117,
+            "src": "1247:32:2",
+            "stateMutability": "nonpayable",
+            "superFunction": 13,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "1555:24:2",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 116,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1535:2:2"
+            },
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1555:0:2"
+            },
+            "scope": 117,
+            "src": "1526:53:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 118,
+        "src": "84:1498:2"
+      }
+    ],
+    "src": "0:1583:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "1562588259041": {
+      "events": {},
+      "links": {},
+      "address": "0x17cA3e197e9C9b4A4600daB97FcA9F67d4546b49",
+      "transactionHash": "0xd6447e59cd33408f705a945ee3709822726b536369510049bd8c86fb84899d4b"
+    }
+  },
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-07-09T08:33:51.145Z",
+  "devdoc": {
+    "methods": {},
+    "title": "GoodAuction "
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

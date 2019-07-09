@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.5.0;
 
 import "./AuctionInterface.sol";
 
@@ -11,14 +11,14 @@ contract GoodAuction is AuctionInterface {
 
 	/* 	Bid function, now shifted to pull paradigm
 		Must return true on successful send and/or bid, bidder
-		reassignment. Must return false on failure and 
+		reassignment. Must return false on failure and
 		allow people to retrieve their funds  */
 	function bid() payable external returns(bool) {
 		// YOUR CODE HERE
 	}
 
-	/*  Implement withdraw function to complete new 
-	    pull paradigm. Returns true on successful 
+	/*  Implement withdraw function to complete new
+	    pull paradigm. Returns true on successful
 	    return of owed funds and false on failure
 	    or no funds owed.  */
 	function withdrawRefund() external returns(bool) {
@@ -28,13 +28,13 @@ contract GoodAuction is AuctionInterface {
 	/*  Allow users to check the amount they are owed
 		before calling withdrawRefund(). Function returns
 		amount owed.  */
-	function getMyBalance() constant external returns(uint) {
+	function getMyBalance() view external returns(uint) {
 		return refunds[msg.sender];
 	}
 
 
 	/* 	Consider implementing this modifier
-		and applying it to the reduceBid function 
+		and applying it to the reduceBid function
 		you fill in below. */
 	modifier canReduce() {
 		_;
@@ -54,7 +54,7 @@ contract GoodAuction is AuctionInterface {
 		want to profit on people's mistakes.
 		How do we send people their money back?  */
 
-	function () payable {
+	function () external payable {
 		// YOUR CODE HERE
 	}
 
