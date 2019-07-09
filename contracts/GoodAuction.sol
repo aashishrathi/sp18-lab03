@@ -15,6 +15,15 @@ contract GoodAuction is AuctionInterface {
 		allow people to retrieve their funds  */
 	function bid() payable external returns(bool) {
 		// YOUR CODE HERE
+		if(msg.value > highestBid){
+			if(highestBid > 0) refunds[highestBidder] += highestBid;
+			highestBidder = msg.sender;
+			highestBid = msg.value;
+			return true;
+		} else {
+			refunds[msg.sender] += msg.value;
+			return false;
+		}
 	}
 
 	/*  Implement withdraw function to complete new
@@ -22,7 +31,10 @@ contract GoodAuction is AuctionInterface {
 	    return of owed funds and false on failure
 	    or no funds owed.  */
 	function withdrawRefund() external returns(bool) {
-		// YOUR CODE HERE
+		if(refunds[msg.sender] > 0){
+			refunds[msg.sender] = 0;
+			require(msg.sender.send(refunds[msg.sender]));
+		}
 	}
 
 	/*  Allow users to check the amount they are owed
@@ -37,14 +49,23 @@ contract GoodAuction is AuctionInterface {
 		and applying it to the reduceBid function
 		you fill in below. */
 	modifier canReduce() {
-		_;
+		if(msg.sender == highestBidder){
+			_;
+		}
 	}
 
 
 	/*  Rewrite reduceBid from BadAuction to fix
 		the security vulnerabilities. Should allow the
 		current highest bidder only to reduce their bid amount */
-	function reduceBid() external {}
+	function reduceBid() external canReduce() {
+		if (highestBid > 0) {
+				highestBid = highestBid - 1;
+				highestBidder.send(1);
+		} else {
+			revert();
+		}
+	}
 
 
 	/* 	Remember this fallback function
@@ -56,6 +77,7 @@ contract GoodAuction is AuctionInterface {
 
 	function () external payable {
 		// YOUR CODE HERE
+		refunds[msg.sender] += msg.value;
 	}
 
 }

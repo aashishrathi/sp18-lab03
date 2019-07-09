@@ -33,7 +33,7 @@ contract('BadAuctionTest', function(accounts) {
 			async function() {
 				await notPoisoned.bid(args._smallAmount);
 				let cleanBalance = await notPoisoned.getBalance.call();
-				assert.isBelow(cleanBalance.valueOf(), args._bigAmount,
+				assert.equal(cleanBalance.valueOf(), args._bigAmount - args._smallAmount,
 					"some balance has been spent");
 				let highestBid = await bad.getHighestBid.call();
 				let highestBidder = await bad.getHighestBidder.call();
@@ -46,7 +46,7 @@ contract('BadAuctionTest', function(accounts) {
 			"be able to displace the highest bidder", async function() {
 				await notPoisoned.bid(args._smallAmount);
 				let cleanBalance = await notPoisoned.getBalance.call();
-				assert.isBelow(cleanBalance.valueOf(), args._bigAmount,
+				assert.equal(cleanBalance.valueOf(), args._bigAmount - args._smallAmount,
 					"some balance has been spent");
 				let anotherNotPoisoned = await NotPoisoned
 					.new({value: args._bigAmount});
@@ -68,7 +68,7 @@ contract('BadAuctionTest', function(accounts) {
 			"displace the highest bidder", async function() {
 				await notPoisoned.bid(args._smallAmount);
 				let cleanBalance = await notPoisoned.getBalance.call();
-				assert.isBelow(cleanBalance.valueOf(), args._bigAmount,
+				assert.equal(cleanBalance.valueOf(), args._bigAmount - args._smallAmount,
 					"some balance has been spent");
 				let anotherNotPoisoned = await NotPoisoned
 					.new({value: args._bigAmount});
@@ -78,7 +78,7 @@ contract('BadAuctionTest', function(accounts) {
 				assert.equal(cleanBalance.valueOf(), args._bigAmount,
 					"some balance has been returned");
 				let anotherCleanBalance = await anotherNotPoisoned.getBalance.call();
-				assert.isBelow(anotherCleanBalance.valueOf(), args._bigAmount,
+				assert.equal(anotherCleanBalance.valueOf(), args._bigAmount - args._biggerSmallAmount,
 					"some balance has been spent");
 				let highestBid = await bad.getHighestBid.call();
 				let highestBidder = await bad.getHighestBidder.call();
@@ -109,7 +109,7 @@ contract('BadAuctionTest', function(accounts) {
 			async function() {
 				await poisoned.bid(args._smallAmount);
 				let poisonedBalance = await poisoned.getBalance.call();
-				assert.isBelow(poisonedBalance.valueOf(), args._bigAmount,
+				assert.equal(poisonedBalance.valueOf(), args._bigAmount - args._smallAmount,
 					"some balance has been spent");
 				let highestBid = await bad.getHighestBid.call();
 				let highestBidder = await bad.getHighestBidder.call();
@@ -126,7 +126,7 @@ contract('BadAuctionTest', function(accounts) {
 				let notPoisonedBalance = await notPoisoned.getBalance.call();
 				let highestBid = await bad.getHighestBid.call();
 				let highestBidder = await bad.getHighestBidder.call();
-				assert.isBelow(poisonedBalance.valueOf(), args._bigAmount,
+				assert.equal(poisonedBalance.valueOf(), args._bigAmount - args._smallAmount,
 					"some balance has been spent");
 				/* Optimized for Truffle, for now */
 				assert.equal(notPoisonedBalance.valueOf(), args._bigAmount,
